@@ -1,0 +1,39 @@
+.Product_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 10rem !important;
+}
+
+.Product_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 30rem;
+  padding: 6px;
+}
+
+.card-body  {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Product_card > img {
+  height: 15rem;
+  width: 12rem;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.Product_card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.Product_card:hover > img {
+  z-index: 1000;
+  height: 16rem;
+  width: 13rem;
+}

@@ -1,0 +1,30 @@
+/* .signup-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup_cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  height: 500px;
+  width: 800px;
+  border: 1px solid black;
+  margin-top: 100px;
+}
+
+.signup-Img {
+  width: 300px;
+}
+
+@media (min-width: 600px) {
+  .signup-Img {
+    display: none;
+  }
+  .signup-card {
+    width: 25rem;
+  }
+} */

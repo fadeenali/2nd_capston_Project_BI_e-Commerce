@@ -1,0 +1,29 @@
+.gotoproducts_card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+ height: 28rem;
+  padding: 10px;
+}
+
+
+.gotoproducts_card > img {
+  
+  height: 15rem;
+  width: 12rem;
+  object-fit: contain;
+  
+}
+
+
+.gotoproducts_card:hover >img {
+
+height: 14rem;
+width: 13rem;
+
+}
+
+
+

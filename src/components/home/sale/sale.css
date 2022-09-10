@@ -1,0 +1,19 @@
+.sale_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sale_carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 91.3vh;
+  width: 80vw;
+}
+
+.sale_img {
+  height: 80vh;
+  width: 90vw;
+  object-fit: contain;
+}
