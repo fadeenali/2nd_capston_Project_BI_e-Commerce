@@ -30,9 +30,7 @@ function Login() {
               border="light"
               style={{ width: "30rem" }}
             >
-              <Card.Header className="fs-2 d-flex justify-content-center">
-                login
-              </Card.Header>
+              <div className="fs-2 d-flex justify-content-center">login</div>
               <Card.Body>
                 <Row>
                   <FloatingLabel
@@ -51,14 +49,26 @@ function Login() {
                   </FloatingLabel>
                 </Row>
               </Card.Body>
-              <Card.Footer className="d-flex justify-content-between ">
+              <div className="row d-flex justify-content-center border-bottom ">
                 <Link to="/">
-                  <Button className="btn-lg px-5 btn-dark"> login</Button>
+                  <Button className="col-lg-12 btn-lg px-5 btn-dark">
+                    {" "}
+                    login
+                  </Button>
                 </Link>
-                <Link to="/Signup">
-                  <Button className="btn-lg px-5 btn-dark"> Signup</Button>
-                </Link>
-              </Card.Footer>
+                <div className="col-lg-12 text-center my-4 ">
+                  forget password?{" "}
+                </div>
+              </div>
+              <div className="signuppage row  d-flex justify-content-center  text-center flex-wrap my-3">
+                <div className="col-lg-6">
+                  <Link to="/Signup">
+                    <Button className="px-5 btn-success">
+                      create a new account
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </Card>
           </Col>
         </Row>

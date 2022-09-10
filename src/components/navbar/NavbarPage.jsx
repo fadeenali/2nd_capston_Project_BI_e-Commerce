@@ -1,13 +1,24 @@
 import React from "react";
+import "./Navbar.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useSelector } from "react-redux";
 import { FaCartArrowDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 const NavbarPage = () => {
+  const cartarr = useSelector((state) => state.CartSlice);
+
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+        className="navbar-main"
+      >
         <Container>
           <Navbar.Brand className="fs-3 px-4">
             <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
@@ -16,13 +27,16 @@ const NavbarPage = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link>Phone</Nav.Link>
-              <Nav.Link>electronics</Nav.Link>
-              <Nav.Link>Dress</Nav.Link>
-              <Nav.Link>Shoes</Nav.Link>
-            </Nav>
+            <Nav className="me-auto"></Nav>
             <Nav>
+              <Nav.Link className="ml-4 fs-5">
+                <Link
+                  to="/product"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  Product
+                </Link>
+              </Nav.Link>
               <Nav.Link className="ml-4 fs-5">
                 <Link
                   to="/login"
@@ -31,14 +45,7 @@ const NavbarPage = () => {
                   Login
                 </Link>
               </Nav.Link>
-              <Nav.Link className="ml-4 fs-5">
-                <Link
-                  to="/signup"
-                  style={{ textDecoration: "none", color: "#fff" }}
-                >
-                  Signup
-                </Link>
-              </Nav.Link>
+             
               <Nav.Link eventKey={2}>
                 <Link
                   to="/cart"
@@ -46,7 +53,9 @@ const NavbarPage = () => {
                 >
                   <FaCartArrowDown className="fs-4 mr-5" />
                 </Link>
-                <span className="cart_Item_count mx-2">{`1`}</span>
+                <span className="nav_cart_arr cart_Item_count mx-2 p-1">
+                  {cartarr.length}
+                </span>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -30,9 +30,10 @@ function Signup() {
               border="light"
               style={{ width: "30rem" }}
             >
-              <Card.Header className="fs-2 d-flex justify-content-center ">
-                Signup
-              </Card.Header>
+              <div className=" row d-flex justify-content-center border-bottom  ">
+                <h2 className="col-lg-12 text-center">Signup</h2>
+                <p className="col-lg-12">it's free and always will be</p>
+              </div>
               <Card.Body>
                 <Row className="mb-4">
                   <Col className="sm-12">
@@ -91,11 +92,11 @@ function Signup() {
                   </FloatingLabel>
                 </Row>
               </Card.Body>
-              <Card.Footer className="d-flex justify-content-center">
+              <div className="d-flex justify-content-center">
                 <Link to="/">
-                  <Button className="btn-lg px-5 btn-dark"> Signup</Button>
+                  <Button className="btn-lg px-5 btn-dark col-lg-12"> Signup</Button>
                 </Link>
-              </Card.Footer>
+              </div>
             </Card>
           </Col>
         </Row>

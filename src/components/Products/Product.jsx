@@ -30,6 +30,11 @@ const Product = () => {
     setProduct(updateitem);
   };
 
+  //open model function 
+  const hadleModel=(item)=>{
+    console.log(item)
+  }
+
   return (
     <div>
       <h1>Products</h1>
@@ -50,24 +55,25 @@ const Product = () => {
       </div>
       <div className="row Product_main">
         {product?.map((item, index) => {
-          // const { id, image, name, category, price, description } = item;
+          const { id, image, name, category, price, description } = item;
           return (
-            <div className="col-lg-4 col-md-6 col-sm-10  mb-5" key={item.id}>
+            <div className="col-lg-3 col-md-6 col-sm-10  mb-5" key={id}>
               <div className="Product_card">
                 <img
-                  src={item.image}
+                  src={image}
                   className="card-img-top  card_img"
                   alt="shoes-pic"
+                  onClick={()=> hadleModel(item)}
                 />
                 <div className="card-body text-align-center">
                   <h5 className="card-title">
-                    <b> {item.name} </b>
+                    <b> {name} </b>
                   </h5>
                   <p className="card-text">
                     {" "}
-                    {item.description.slice(0, 58) + `....`}{" "}
+                    {description.slice(0, 58) + `....`}{" "}
                   </p>
-                  <h3> {item.price} </h3>
+                  <h4> {price} </h4>
                 </div>
                 <Button
                   className="d-flex justify-content-center "
