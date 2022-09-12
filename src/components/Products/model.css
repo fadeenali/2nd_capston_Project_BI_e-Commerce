@@ -1,7 +1,7 @@
 .main {
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.901);
+  background-color: rgba(33, 33, 33, 0.94);
   position: fixed;
   top: 0;
   display: flex;
@@ -11,13 +11,13 @@
 }
 
 .body .image {
-  max-width: 80vw;
-  max-height: 90vh;
+  max-width: 70vw;
+  max-height: 60vh;
   border: 1px dashed rgba(232, 232, 232, 0.47);
 }
 
 .closeBtn {
-  color: rgb(255, 255, 255);
+  color: rgb(212, 56, 56);
   font-size: 40px;
   position: absolute;
   top: 30px;

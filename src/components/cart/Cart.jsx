@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import CartSlice from "../../redux/slice/CartSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -13,16 +13,18 @@ import {
 } from "../../redux/slice/CartSlice";
 import emptyImg from "./cart-empty.jpg";
 
+import { AiOutlineArrowLeft } from "react-icons/ai";
+
 const Cart = () => {
   const cartData = useSelector((state) => state.CartSlice.cart);
-  const  total = useSelector((state)=> state.CartSlice.total);
+  const total = useSelector((state) => state.CartSlice.total);
 
+  // geting sub count from the cartSlice
+  useEffect(() => {
+    dispatch(calculateTotal());
+  }, [cartData]);
 
-  useEffect(()=>{
-    dispatch(calculateTotal())
-  },[cartData])
-
-  console.log(total)
+  console.log(total);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -31,16 +33,10 @@ const Cart = () => {
     navigate("/product");
   };
 
-  const handleAmount = () => {
-    console.log("amount");
-  };
-
-
-
   // if cart is empty so show
   if (cartData < 1) {
     return (
-      <div className="cartEmpty">
+      <div className="cartEmpty" style={{ minHeight: "53vh" }}>
         <div className="cart_Empty_img  d-flex justify-content-center">
           <img src={emptyImg} alt="emptyCartImage" className="img-fluid" />
         </div>
@@ -64,109 +60,136 @@ const Cart = () => {
           <div className="container px-4 px-lg-5 my-5">
             <div className="row">
               <div className="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
-                <div
-                  className="table-responsive"
-                  style={{ height: "40vh", overflowY: "scroll" }}
-                >
-                  <table className="table overflow-scroll">
-                    <thead>
-                      <tr>
-                        <th scope="col" className="border-0 bg-light">
-                          <div className="p-2 px-3 text-uppercase">Product</div>
-                        </th>
-                        <th scope="col" className="border-0 bg-light">
-                          <div className="p-2 px-3 text-uppercase">Name</div>
-                        </th>
-                        <th scope="col" className="border-0 bg-light">
-                          <div className="py-2 text-uppercase">Quantity</div>
-                        </th>
-                        <th scope="col" className="border-0 bg-light">
-                          <div className="py-2 text-uppercase">Price</div>
-                        </th>
-                        <th scope="col" className="border-0 bg-light">
-                          <div className="py-2 text-uppercase">Remove</div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {cartData?.map((item) => {
-                        const {
-                          id,
-                          image,
-                          name,
-                          category,
-                          price,
-                          description,
-                          amount,
-                        } = item;
+                {/* if  the cart array is empty soo render the img else render the cart table */}
+                {cartData < 1 ? (
+                  <div className="cartEmpty my-5" style={{ minHeight: "40vh" }}>
+                    <div className="cart_Empty_img  d-flex justify-content-center">
+                      <img
+                        src={emptyImg}
+                        alt="emptyCartImage"
+                        className="img-fluid"
+                      />
+                    </div>
+                    <div className="btn d-flex justify-content-center text-center ">
+                      <Button
+                        className="add_To_Cart btn btn-danger  mb-5"
+                        onClick={() => backToHome()}
+                        style={{ outline: "none" }}
+                      >
+                        Add something to cart
+                      </Button>
+                    </div>
+                  </div>
+                ) : (
+                  <div
+                    className="table-responsive"
+                    style={{ height: "40vh", overflowY: "scroll" }}
+                  >
+                    <table className="table overflow-scroll">
+                      <thead>
+                        <tr>
+                          <th scope="col" className="border-0 bg-light">
+                            <div className="p-2 px-3 text-uppercase">
+                              Product
+                            </div>
+                          </th>
+                          <th scope="col" className="border-0 bg-light">
+                            <div className="p-2 px-3 text-uppercase">Name</div>
+                          </th>
+                          <th scope="col" className="border-0 bg-light">
+                            <div className="py-2 text-uppercase">Quantity</div>
+                          </th>
+                          <th scope="col" className="border-0 bg-light">
+                            <div className="py-2 text-uppercase">Price</div>
+                          </th>
+                          <th scope="col" className="border-0 bg-light">
+                            <div className="py-2 text-uppercase">Remove</div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {cartData?.map((item) => {
+                          const {
+                            id,
+                            image,
+                            name,
+                            category,
+                            price,
+                            description,
+                            amount,
+                          } = item;
 
-                        return (
-                          <tr key={id}>
-                            <th scope="row" className="border-0">
-                              <div className="p-2">
-                                <img
-                                  src={image}
-                                  alt="productImage"
-                                  width="70"
-                                  className="img-fluid rounded shadow-sm"
-                                />
-                              </div>
-                            </th>
-                            <td className="border-0 align-middle text-uppercase">
-                              <strong> {name} </strong>
-                            </td>
-                            <td className="border-0 align-middle">
-                              {/* handel quantity of items */}
-                              <Button
-                                className="btn btn-light border border-2"
-                                onClick={() => {
-                                  if (amount === 1) {
-                                    dispatch(removeFromCart(item.id));
+                          return (
+                            <tr key={id}>
+                              <th scope="row" className="border-0">
+                                <div className="p-2">
+                                  <img
+                                    src={image}
+                                    alt="productImage"
+                                    width="70"
+                                    className="img-fluid rounded shadow-sm"
+                                  />
+                                </div>
+                              </th>
+                              <td className="border-0 align-middle text-uppercase">
+                                <strong> {name} </strong>
+                              </td>
+                              <td class="border-0 align-middle">
+                                <Button
+                                  className="btn btn-light border border-0 fs-5 fw-bold "
+                                  onClick={() => {
+                                    if (amount === 1) {
+                                      dispatch(removeFromCart(item.id));
+                                    }
+                                    dispatch(decreaseQuantity(item));
+                                  }}
+                                >
+                                  -
+                                </Button>
+                                 
+                                <strong className="mx-2 fs-5"> {amount} </strong>
+
+                                <Button
+                                  className="btn btn-light border border-0 fs-5 fw-bold "
+                                  onClick={() =>
+                                    dispatch(increaseQuantity(item))
                                   }
-                                  dispatch(decreaseQuantity(item));
-                                }}
-                              >
-                                -
-                              </Button>
-                              <input
-                                type="text"
-                                value={amount}
-                                onChange={() => handleAmount()}
-                                style={{
-                                  textAlign: "center",
-                                  width: "30px",
-                                  border: "none",
-                                }}
-                              />
-                              <Button
-                                className="btn btn-light border border-2"
-                                onClick={() => dispatch(increaseQuantity(item))}
-                              >
-                                +
-                              </Button>
-                            </td>
-                            <td className="border-0 align-middle">
-                              <strong> {price} ₹</strong>
-                            </td>
-                            <td className="border-0 align-middle">
-                              <Button
-                                variant="dark"
-                                onClick={() =>
-                                  dispatch(removeFromCart(item.id))
-                                }
-                              >
-                                {" "}
-                                <FaTrash />{" "}
-                              </Button>
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                </div>
+                                >
+                                  +
+                                </Button>
+                              </td>
+                              <td className="border-0 align-middle">
+                                <strong> {price} ₹</strong>
+                              </td>
+                              <td className="border-0 align-middle">
+                                <Button
+                                  variant="dark"
+                                  onClick={() =>
+                                    dispatch(removeFromCart(item.id))
+                                  }
+                                >
+                                  {" "}
+                                  <FaTrash />{" "}
+                                </Button>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
               </div>
-              <button onClick={() => dispatch(clearCart())}> Clear cart</button>
+              <div className="clear-btn d-flex  justify-content-end">
+                <Button
+                  variant="danger"
+                  className="mx-4 col-lg-3 "
+                  onClick={() => dispatch(clearCart())}
+                >
+                  {" "}
+                  Clear cart
+                </Button>
+              </div>
             </div>
             <div className="row py-5 p-4 bg-white rounded shadow-sm">
               <div className="col-lg-6">
@@ -198,6 +221,13 @@ const Cart = () => {
                     </div>
                   </div>
                 </div>
+
+                <div class="p-4  row">
+                  <Button className="col  btn-lg">
+                    {" "}
+                    <AiOutlineArrowLeft /> continue Shiping{" "}
+                  </Button>
+                </div>
               </div>
               <div className="col-lg-6">
                 <div className="bg-light rounded-pill px-4 py-3 text-uppercase fw-bold">
@@ -213,7 +243,7 @@ const Cart = () => {
                   <ul className="list-unstyled mb-4">
                     <li className="d-flex justify-content-between py-3 border-bottom">
                       <strong className="text-muted">Order Subtotal </strong>
-                      <strong> {total}  ₹</strong>
+                      <strong> {total} ₹</strong>
                     </li>
                     <li className="d-flex justify-content-between py-3 border-bottom">
                       <strong className="text-muted">
@@ -227,7 +257,7 @@ const Cart = () => {
                     </li>
                     <li className="d-flex justify-content-between py-3 border-bottom">
                       <strong className="text-muted">Total</strong>
-                      <h5 className="fw-bold fs-4"> {total+ 100 } ₹</h5>
+                      <h5 className="fw-bold fs-4"> {total + 100} ₹</h5>
                     </li>
                   </ul>
                   <a
@@ -247,3 +277,28 @@ const Cart = () => {
 };
 
 export default Cart;
+
+{/* <td className="border-0 align-middle">
+  handel quantity of items
+  <Button
+    className="btn btn-light border border-0"
+    onClick={() => {
+      if (amount === 1) {
+        dispatch(removeFromCart(item.id));
+      }
+      dispatch(decreaseQuantity(item));
+    }}
+  >
+    -
+  </Button>
+  <p>
+    {" "}
+    <strong> {amount} </strong>{" "}
+  </p>
+  <Button
+    className="btn btn-light border border-0  "
+    onClick={() => dispatch(increaseQuantity(item))}
+  >
+    +
+  </Button>
+</td>; */}

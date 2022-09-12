@@ -6,8 +6,8 @@ import { AiFillStar } from "react-icons/ai";
 const Model = ({ modelImg, closeModel }) => {
   return (
     <>
-      <div className="main">
-        <div className="body">
+      <div className="main" onClick={() => closeModel(false)} >
+        <div className="body"  >
           <img className="image" src={modelImg.image} />
            <div className="reviews">
              <h4>  <AiFillStar className="bg-warning m-1"/>  
