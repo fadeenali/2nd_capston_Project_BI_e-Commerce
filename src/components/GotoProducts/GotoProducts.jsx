@@ -62,7 +62,7 @@ const Category = () => {
   ];
   return (
     <div className="gotoproducts_main">
-      <h1>view Producs</h1>
+      <h1 className="mx-4 text-uppercase"> check out some existing products  </h1>
       <div className="row mt-5">
         {gotoproducts.map((item, index) => {
           const { id, image, name, category, price, description } = item;

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Products.css";
+import Model from "./Model";
 import data from "./ProductData";
 import Button from "react-bootstrap/Button";
 import { useSelector, useDispatch } from "react-redux";
@@ -15,6 +16,8 @@ const Product = () => {
   console.log(cartarr, "cartArr");
   const [product, setProduct] = useState(ProductData);
   const [catbtn, setCatbtn] = useState(catogryArr);
+  const [modelOpen, setModelOpen] = useState(false);
+  const [modelImg, setModelImg] = useState("");
 
   const dispatch = useDispatch();
 
@@ -30,20 +33,21 @@ const Product = () => {
     setProduct(updateitem);
   };
 
-  //open model function 
-  const hadleModel=(item)=>{
-    console.log(item)
-  }
+  //open model function
+
+  const hadleModel = (item) => {
+    setModelOpen(true);
+    setModelImg(item);
+  };
 
   return (
     <div>
-      <h1>Products</h1>
-      <div className="menu">
+      <div className="menu d-flex justify-content-center mb-5">
         {catbtn?.map((item, index) => {
           return (
             <Button
               key={index}
-              className="m-5"
+              className="mx-3 my-5"
               variant="danger"
               value={item}
               onClick={(e) => filterItem(e.target.value)}
@@ -53,7 +57,9 @@ const Product = () => {
           );
         })}
       </div>
+
       <div className="row Product_main">
+        {modelOpen && <Model modelImg={modelImg} closeModel={setModelOpen} />}
         {product?.map((item, index) => {
           const { id, image, name, category, price, description } = item;
           return (
@@ -63,7 +69,7 @@ const Product = () => {
                   src={image}
                   className="card-img-top  card_img"
                   alt="shoes-pic"
-                  onClick={()=> hadleModel(item)}
+                  onClick={() => hadleModel(item)}
                 />
                 <div className="card-body text-align-center">
                   <h5 className="card-title">
@@ -73,7 +79,7 @@ const Product = () => {
                     {" "}
                     {description.slice(0, 58) + `....`}{" "}
                   </p>
-                  <h4> {price} </h4>
+                  <h4> {price} ₹ </h4>
                 </div>
                 <Button
                   className="d-flex justify-content-center "

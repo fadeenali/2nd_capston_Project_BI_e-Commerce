@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Navbar.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { calculateTotal } from "../../redux/slice/CartSlice";
 import { FaCartArrowDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const NavbarPage = () => {
-  const cartarr = useSelector((state) => state.CartSlice);
+  const dispatch = useDispatch();
+
+  const amount = useSelector((state) => state.CartSlice.amount);
+  const cartData = useSelector((state) => state.CartSlice.cart);
+
+  useEffect(() => {
+    dispatch(calculateTotal());
+  }, [cartData]);
 
   return (
     <div>
@@ -20,7 +28,7 @@ const NavbarPage = () => {
         className="navbar-main"
       >
         <Container>
-          <Navbar.Brand className="fs-3 px-4">
+          <Navbar.Brand className="fs-3">
             <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
               e-Commerce
             </Link>
@@ -29,6 +37,11 @@ const NavbarPage = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
             <Nav>
+              <Nav.Link className="ml-4 fs-5">
+                <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
+                  Home
+                </Link>
+              </Nav.Link>
               <Nav.Link className="ml-4 fs-5">
                 <Link
                   to="/product"
@@ -45,7 +58,7 @@ const NavbarPage = () => {
                   Login
                 </Link>
               </Nav.Link>
-             
+
               <Nav.Link eventKey={2}>
                 <Link
                   to="/cart"
@@ -53,8 +66,9 @@ const NavbarPage = () => {
                 >
                   <FaCartArrowDown className="fs-4 mr-5" />
                 </Link>
+
                 <span className="nav_cart_arr cart_Item_count mx-2 p-1">
-                  {cartarr.length}
+                  {amount}
                 </span>
               </Nav.Link>
             </Nav>

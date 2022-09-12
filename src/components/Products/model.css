@@ -1,0 +1,32 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.901);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.body .image {
+  max-width: 80vw;
+  max-height: 90vh;
+  border: 1px dashed rgba(232, 232, 232, 0.47);
+}
+
+.closeBtn {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  position: absolute;
+  top: 30px;
+  right: 100px;
+}
+
+@media (max-width: 768px) {
+  .closeBtn {
+    right: 70px !important;
+    top: 20px;
+  }
+}

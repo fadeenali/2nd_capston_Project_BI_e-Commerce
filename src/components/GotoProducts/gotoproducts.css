@@ -6,12 +6,19 @@
   width: 20rem;
   height: 28rem;
   padding: 10px;
+  border-radius: 30px;
+  
 }
 
 .gotoproducts_card > img {
-  height: 15rem;
-  width: 12rem;
+  height: 13rem;
+  width: 10rem;
   object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.gotoproducts_card:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .gotoproducts_card:hover > img {
