@@ -136,7 +136,7 @@ const Data = [
     image: "images/dashF15.webp",
     name: "Assus Dash F15",
     category: "electronics",
-    price: "80,000",
+    price: "80000",
     description:
       "Lorem ipsum dolor sit quas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,

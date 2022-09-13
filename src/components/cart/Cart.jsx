@@ -16,7 +16,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const Cart = () => {
   const cartData = useSelector((state) => state.CartSlice.cart);
-  const cartSubtotal = useSelector((state) => state.CartSlice.total);
+  const cartSubtotal = useSelector((state) => state?.CartSlice?.total);
   const subTotal = cartSubtotal + 100;
 
   // geting sub count from the cartSlice
@@ -124,7 +124,7 @@ const Cart = () => {
                               <td className="border-0 align-middle text-uppercase">
                                 <strong> {name} </strong>
                               </td>
-                              <td class="border-0 align-middle">
+                              <td className="border-0 align-middle">
                                 <Button
                                   className="btn btn-light border border-0 fs-5 fw-bold "
                                   onClick={() => {
@@ -250,10 +250,7 @@ const Cart = () => {
                     </li>
                     <li className="d-flex justify-content-between py-3 border-bottom">
                       <strong className="text-muted">Total</strong>
-                      <h5 className="fw-bold fs-4">
-                        {" "}
-                        {subTotal} ₹
-                      </h5>
+                      <h5 className="fw-bold fs-4"> {subTotal} ₹</h5>
                     </li>
                   </ul>
                   <a
