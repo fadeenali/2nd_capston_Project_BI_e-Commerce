@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import CartSlice from "../../redux/slice/CartSlice";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
@@ -17,14 +16,13 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const Cart = () => {
   const cartData = useSelector((state) => state.CartSlice.cart);
-  const total = useSelector((state) => state.CartSlice.total);
+  const cartSubtotal = useSelector((state) => state.CartSlice.total);
+  const subTotal = cartSubtotal + 100;
 
   // geting sub count from the cartSlice
   useEffect(() => {
     dispatch(calculateTotal());
   }, [cartData]);
-
-  console.log(total);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -109,15 +107,7 @@ const Cart = () => {
                       </thead>
                       <tbody>
                         {cartData?.map((item) => {
-                          const {
-                            id,
-                            image,
-                            name,
-                            category,
-                            price,
-                            description,
-                            amount,
-                          } = item;
+                          const { id, image, name, price, amount } = item;
 
                           return (
                             <tr key={id}>
@@ -146,8 +136,11 @@ const Cart = () => {
                                 >
                                   -
                                 </Button>
-                                 
-                                <strong className="mx-2 fs-5"> {amount} </strong>
+
+                                <strong className="mx-2 fs-5">
+                                  {" "}
+                                  {amount}{" "}
+                                </strong>
 
                                 <Button
                                   className="btn btn-light border border-0 fs-5 fw-bold "
@@ -223,7 +216,7 @@ const Cart = () => {
                 </div>
 
                 <div class="p-4  row">
-                  <Button className="col  btn-lg">
+                  <Button className="col  btn-lg" onClick={() => backToHome()}>
                     {" "}
                     <AiOutlineArrowLeft /> continue Shiping{" "}
                   </Button>
@@ -243,7 +236,7 @@ const Cart = () => {
                   <ul className="list-unstyled mb-4">
                     <li className="d-flex justify-content-between py-3 border-bottom">
                       <strong className="text-muted">Order Subtotal </strong>
-                      <strong> {total} ₹</strong>
+                      <strong> {cartSubtotal} ₹</strong>
                     </li>
                     <li className="d-flex justify-content-between py-3 border-bottom">
                       <strong className="text-muted">
@@ -257,7 +250,10 @@ const Cart = () => {
                     </li>
                     <li className="d-flex justify-content-between py-3 border-bottom">
                       <strong className="text-muted">Total</strong>
-                      <h5 className="fw-bold fs-4"> {total + 100} ₹</h5>
+                      <h5 className="fw-bold fs-4">
+                        {" "}
+                        {subTotal} ₹
+                      </h5>
                     </li>
                   </ul>
                   <a
@@ -277,28 +273,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
-{/* <td className="border-0 align-middle">
-  handel quantity of items
-  <Button
-    className="btn btn-light border border-0"
-    onClick={() => {
-      if (amount === 1) {
-        dispatch(removeFromCart(item.id));
-      }
-      dispatch(decreaseQuantity(item));
-    }}
-  >
-    -
-  </Button>
-  <p>
-    {" "}
-    <strong> {amount} </strong>{" "}
-  </p>
-  <Button
-    className="btn btn-light border border-0  "
-    onClick={() => dispatch(increaseQuantity(item))}
-  >
-    +
-  </Button>
-</td>; */}

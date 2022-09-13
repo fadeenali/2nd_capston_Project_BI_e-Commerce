@@ -13,7 +13,7 @@ const Product = () => {
   // getting product from products slice
   const ProductData = useSelector((state) => state.ProductSlice);
   const cartarr = useSelector((state) => state.CartSlice);
-  console.log(cartarr, "cartArr");
+
   const [product, setProduct] = useState(ProductData);
   const [catbtn, setCatbtn] = useState(catogryArr);
   const [modelOpen, setModelOpen] = useState(false);
@@ -42,12 +42,12 @@ const Product = () => {
 
   return (
     <div>
-      <div className="menu d-flex justify-content-center mb-5">
+      <div className="catagory-btn d-flex justify-content-center my-3">
         {catbtn?.map((item, index) => {
           return (
             <Button
               key={index}
-              className="mx-3 my-5"
+              className=" mx-2 my-2  sm-6 text-uppercase"
               variant="danger"
               value={item}
               onClick={(e) => filterItem(e.target.value)}
@@ -63,15 +63,18 @@ const Product = () => {
         {product?.map((item, index) => {
           const { id, image, name, category, price, description } = item;
           return (
-            <div className="col-lg-3 col-md-6 col-sm-10  mb-5" key={id}>
+            <div
+              className="product_card_container  col-lg-3 col-md-6 col-sm-10  mb-5"
+              key={id}
+            >
               <div className="Product_card">
                 <img
                   src={image}
-                  className="card-img-top  card_img"
+                  className="card-img-top mb-3 card_img"
                   alt="shoes-pic"
                   onClick={() => hadleModel(item)}
                 />
-                <div className="card-body text-align-center">
+                <div className="card-body ">
                   <h5 className="card-title">
                     <b> {name} </b>
                   </h5>

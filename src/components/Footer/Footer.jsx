@@ -1,4 +1,10 @@
 import React from "react";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
+import { FaPhoneAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,13 +15,13 @@ const Footer = () => {
             <section className="">
               <div className="row">
                 <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                  <h6 className="text-uppercase mb-4 font-weight-bold">
-                    Company name
-                  </h6>
+                  <h6 className=" fs-4 mb-4 font-weight-bold">e-Commerce</h6>
                   <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
+                    There is always light. If only we're brave enough to see it.
+                    If only we're brave enough to be it. <br />
+                    You're braver than you believe, stronger than you seem, and
+                    smarter than you think.  <br />
+                    
                   </p>
                 </div>
 
@@ -23,19 +29,27 @@ const Footer = () => {
 
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                   <h6 className="text-uppercase mb-4 font-weight-bold">
-                    Products
+                    get to know us
                   </h6>
                   <p>
-                    <a className="text-white">MDBootstrap</a>
+                    <Link to="#" className="text-white">
+                      About us
+                    </Link>
                   </p>
                   <p>
-                    <a className="text-white">MDWordPress</a>
+                    <Link to="#" className="text-white">
+                      careears{" "}
+                    </Link>
                   </p>
                   <p>
-                    <a className="text-white">BrandFlow</a>
+                    <Link to="#" className="text-white">
+                      Press Releases{" "}
+                    </Link>
                   </p>
                   <p>
-                    <a className="text-white">Bootstrap Angular</a>
+                    <Link to="#" className="text-white">
+                      e-Commerce Cares{" "}
+                    </Link>
                   </p>
                 </div>
 
@@ -46,16 +60,24 @@ const Footer = () => {
                     Useful links
                   </h6>
                   <p>
-                    <a className="text-white">Your Account</a>
+                    <Link to="#" className="text-white">
+                      your Account{" "}
+                    </Link>
                   </p>
                   <p>
-                    <a className="text-white">Become an Affiliate</a>
+                    <Link to="#" className="text-white">
+                      Become an Affiliate
+                    </Link>
                   </p>
                   <p>
-                    <a className="text-white">Shipping Rates</a>
+                    <Link to="#" className="text-white">
+                      Shipping Rates
+                    </Link>
                   </p>
                   <p>
-                    <a className="text-white">Help</a>
+                    <Link to="#" className="text-white">
+                      Help
+                    </Link>
                   </p>
                 </div>
 
@@ -63,19 +85,21 @@ const Footer = () => {
 
                 <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                   <h6 className="text-uppercase mb-4 font-weight-bold">
-                    Contact
+                    Contact us
                   </h6>
                   <p>
-                    <i className="fas fa-home mr-3"></i> New York, NY 10012, US
+                    <i className="fas fa-home mr-3"></i> Florida, miami beach ,
+                    NY 911, USA
                   </p>
                   <p>
-                    <i className="fas fa-envelope mr-3"></i> info@gmail.com
+                    <i className="fas fa-envelope mr-3"></i>{" "}
+                    contect@e-Commerce.com
                   </p>
                   <p>
-                    <i className="fas fa-phone mr-3"></i> + 01 234 567 88
+                    <FaPhoneAlt /> + 91 234 567 88
                   </p>
                   <p>
-                    <i className="fas fa-print mr-3"></i> + 01 234 567 89
+                    <FaPhoneAlt /> + 91 234 567 89
                   </p>
                 </div>
               </div>
@@ -86,12 +110,7 @@ const Footer = () => {
             <section className="p-3 pt-0">
               <div className="row d-flex align-items-center">
                 <div className="col-md-7 col-lg-8 text-center text-md-start">
-                  <div className="p-3">
-                    © 2020 Copyright:
-                    <a className="text-white" href="https://mdbootstrap.com/">
-                      MDBootstrap.com
-                    </a>
-                  </div>
+                  <div className="p-3">© 2022 Copyright : e-Commerce.com</div>
                 </div>
 
                 <div className="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
@@ -100,6 +119,7 @@ const Footer = () => {
                     role="button"
                   >
                     <i className="fab fa-facebook-f"></i>
+                    <FaFacebook />
                   </a>
 
                   <a
@@ -107,6 +127,7 @@ const Footer = () => {
                     role="button"
                   >
                     <i className="fab fa-twitter"></i>
+                    <FaInstagram />
                   </a>
 
                   <a
@@ -114,6 +135,7 @@ const Footer = () => {
                     role="button"
                   >
                     <i className="fab fa-google"></i>
+                    <FiMail />
                   </a>
 
                   <a
@@ -121,6 +143,7 @@ const Footer = () => {
                     role="button"
                   >
                     <i className="fab fa-instagram"></i>
+                    <FaTwitter />
                   </a>
                 </div>
               </div>

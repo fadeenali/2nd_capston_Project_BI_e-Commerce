@@ -1,0 +1,11 @@
+.login-main{
+    height: 80vh;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .login-main img {
+      display: none;
+    }
+  }
+  

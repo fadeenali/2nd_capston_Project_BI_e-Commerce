@@ -8,6 +8,9 @@ const Data = [
     description:
       "Lorem ipsum douas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 2,
@@ -18,6 +21,9 @@ const Data = [
     description:
       "Lorem ipsum douas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 3,
@@ -28,6 +34,9 @@ const Data = [
     description:
       "Lorem ipsum douas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 4,
@@ -38,6 +47,9 @@ const Data = [
     description:
       "Lorem ipsum douas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 5,
@@ -48,6 +60,9 @@ const Data = [
     description:
       "Lorem ipsum douas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 6,
@@ -58,6 +73,9 @@ const Data = [
     description:
       "Lorem ipsum douas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
 
   {
@@ -68,7 +86,10 @@ const Data = [
     price: "12000",
     description:
       "I love Nike air Jordan Zoom Max realy oo yues oluta ipsam autem eiusfugiat in . ",
-      amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
 
   {
@@ -80,6 +101,9 @@ const Data = [
     description:
       "Lorem ipsum  Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 9,
@@ -90,6 +114,9 @@ const Data = [
     description:
       "Lorem ipsum do. Accusamus quas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 10,
@@ -100,6 +127,9 @@ const Data = [
     description:
       "Lorem ipsum dolor sit  quas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 11,
@@ -110,6 +140,9 @@ const Data = [
     description:
       "Lorem ipsum dolor sit quas, soluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 12,
@@ -120,6 +153,9 @@ const Data = [
     description:
       "Lorem ipsum dosoluta ipsam autem eius necessitatibus fugiat in . ",
     amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 13,
@@ -128,7 +164,10 @@ const Data = [
     category: "electronics",
     price: "1,40,000",
     description: "LG 52inch TV full HD display , dollby vesion sound support. ",
-      amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 14,
@@ -138,7 +177,10 @@ const Data = [
     price: "2,00,000",
     description:
       "Dell alienware laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 15,
@@ -148,7 +190,10 @@ const Data = [
     price: "80,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 16,
@@ -158,7 +203,10 @@ const Data = [
     price: "80,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 17,
@@ -168,7 +216,10 @@ const Data = [
     price: "80,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 18,
@@ -178,7 +229,10 @@ const Data = [
     price: "5,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 19,
@@ -188,7 +242,10 @@ const Data = [
     price: "5,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 20,
@@ -198,7 +255,10 @@ const Data = [
     price: "5,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 21,
@@ -208,7 +268,10 @@ const Data = [
     price: "5,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 22,
@@ -218,7 +281,10 @@ const Data = [
     price: "2,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 23,
@@ -228,7 +294,10 @@ const Data = [
     price: "2,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 24,
@@ -238,7 +307,10 @@ const Data = [
     price: "2,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 25,
@@ -248,7 +320,10 @@ const Data = [
     price: "2,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 26,
@@ -258,7 +333,10 @@ const Data = [
     price: "2,000",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 27,
@@ -268,7 +346,10 @@ const Data = [
     price: "3099",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 28,
@@ -278,7 +359,10 @@ const Data = [
     price: "4999",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 29,
@@ -288,7 +372,10 @@ const Data = [
     price: "5699",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
 
   {
@@ -299,7 +386,10 @@ const Data = [
     price: "5699",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 31,
@@ -309,7 +399,10 @@ const Data = [
     price: "5699",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 32,
@@ -319,7 +412,10 @@ const Data = [
     price: "5699",
     description:
       "acer nitro 5 laptop, 12GB DDR4 Ram , 1TB SSD, full HD display , dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 33,
@@ -329,7 +425,10 @@ const Data = [
     price: "1,10,000",
     description:
       "samsung S20 ulra | 108 mpx camera | 8GB Ram 256 gb | oleyd display | dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 34,
@@ -339,7 +438,10 @@ const Data = [
     price: "1,10,000",
     description:
       " 108 mpx camera | 8GB Ram 256 gb | oleyd display | dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 35,
@@ -349,7 +451,10 @@ const Data = [
     price: "1,10,000",
     description:
       " 108 mpx camera | 8GB Ram 256 gb | oleyd display | dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
   {
     id: 36,
@@ -359,7 +464,10 @@ const Data = [
     price: "21,000",
     description:
       " 108 mpx camera | 8GB Ram 256 gb | oleyd display | dollby vesion sound support. ",
-        amount : 1,
+    amount: 1,
+    review:
+      "A really good experience with e-Commerce , really appreciate the service",
+    rating: "⭐⭐⭐⭐⭐",
   },
 ];
 

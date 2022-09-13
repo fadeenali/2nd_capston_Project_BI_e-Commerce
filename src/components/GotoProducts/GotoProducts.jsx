@@ -84,7 +84,7 @@ const Category = () => {
                     <h5> {category} </h5>
                   </div>
                   <Link
-                    style={{ textDecoration: "none", color: "#fff" }}
+                    style={{ textDecoration: "none" }}
                     to={"/product"}
                   >
                     <Button

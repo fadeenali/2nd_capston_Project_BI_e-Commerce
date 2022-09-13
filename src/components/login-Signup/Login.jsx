@@ -1,3 +1,4 @@
+import "./Login.css"
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
@@ -34,14 +35,14 @@ function Login() {
               <Card.Body>
                 <Row>
                   <FloatingLabel
-                    className="g-3"
+                    className="g-3 col-sm-12"
                     controlId="floatingInputGrid"
                     label="Email"
                   >
                     <Form.Control type="email" placeholder="name@example.com" />
                   </FloatingLabel>
                   <FloatingLabel
-                    className="g-3"
+                    className="g-3 col-sm-12"
                     controlId="floatingInputGrid"
                     label="Passowrd"
                   >
@@ -51,7 +52,7 @@ function Login() {
               </Card.Body>
               <div className="row d-flex justify-content-center border-bottom ">
                 <Link to="/">
-                  <Button className="col-lg-12 btn-lg px-5 btn-dark">
+                  <Button className="col-lg-12 btn-md px-5 btn-dark">
                     {" "}
                     login
                   </Button>

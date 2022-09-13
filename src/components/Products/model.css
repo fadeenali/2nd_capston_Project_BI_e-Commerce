@@ -9,6 +9,9 @@
   align-items: center;
   z-index: 999;
 }
+.body{
+  width: 70vw;
+}
 
 .body .image {
   max-width: 70vw;
@@ -17,7 +20,7 @@
 }
 
 .closeBtn {
-  color: rgb(212, 56, 56);
+  color: rgb(255, 255, 255);
   font-size: 40px;
   position: absolute;
   top: 30px;

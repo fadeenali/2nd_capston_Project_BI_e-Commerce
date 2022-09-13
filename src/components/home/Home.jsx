@@ -7,12 +7,14 @@ import Signup from "../login-Signup/Signup";
 import NavbarPage from "../navbar/NavbarPage";
 import Product from "../Products/Product";
 import Sale from "./sale/Sale";
+import Review from "../react-slicks/Review";
 
 const Home = () => {
   return (
     <div className="Home_main">
       <Sale />
       <GotoProducts/>
+      <Review/>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import "./Signup.css"
 import { Card } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
